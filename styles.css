@@ -1,0 +1,183 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #ddd;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  section {
+    padding: 2em 0;
+    text-align: center;
+  }
+  
+  .project,
+  .skill,
+  .technology {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project:hover,
+  .skill:hover,
+  .technology:hover {
+    transform: scale(1.05);
+  }
+  
+  .progress-bar,
+  .skill .progress-bar,
+  .technology .progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-bar span,
+  .skill .progress-bar span,
+  .technology .progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    width: var(--progress);
+    text-align: right;
+    color: #fff;
+    line-height: 10px;
+    font-size: 0.8em;
+    padding-right: 5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-top: 1em;
+  }
+  
+  input,
+  textarea {
+    padding: 0.5em;
+    margin-top: 0.5em;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  /* Project Details Popup Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 5px;
+    width: 60%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Skill Details Popup Styles */
+  #skillDetailsModal .modal-content {
+    max-width: 400px;
+  }
+  
+  /* Technology Details Popup Styles */
+  #technologyDetailsModal .modal-content {
+    max-width: 400px;
+  }
+  
