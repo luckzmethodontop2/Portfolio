@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Luckz</h1>
+      <p>Full Stack Developer</p>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>Hi there! I'm a passionate and creative full-stack developer with expertise in JavaScript, HTML, and CSS. I enjoy turning complex problems into simple, beautiful, and intuitive solutions. Let's build something amazing together! I am looking for projects and jobs to work on! So contact me if you need a scripter/programmer</p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skill" onclick="showSkillDetails('HTML', '90% proficiency')">
+      <h3>HTML</h3>
+      <div class="progress-bar" style="--progress: 90%;">
+        <span>90%</span>
+      </div>
+    </div>
+    <div class="skill" onclick="showSkillDetails('CSS', '80% proficiency')">
+      <h3>CSS</h3>
+      <div class="progress-bar" style="--progress: 80%;">
+        <span>80%</span>
+      </div>
+    </div>
+    <div class="skill" onclick="showSkillDetails('JavaScript', '75% proficiency')">
+      <h3>JavaScript</h3>
+      <div class="progress-bar" style="--progress: 75%;">
+        <span>75%</span>
+      </div>
+    </div>
+    <!-- Add Lua skill with 90% proficiency -->
+    <div class="skill" onclick="showSkillDetails('Lua', '90% proficiency')">
+      <h3>Lua</h3>
+      <div class="progress-bar" style="--progress: 90%;">
+        <span>90%</span>
+      </div>
+    </div>
+    <!-- Add more skills as needed -->
+  </section>
+
+  <section id="technologies" class="container">
+    <h2>Technologies</h2>
+    <div class="technology" onclick="showTechnologyDetails('Frontend', 'React, Angular, Vue')">
+      <h3>Frontend</h3>
+      <div class="progress-bar" style="--progress: 80%;">
+        <span>80%</span>
+      </div>
+    </div>
+    <div class="technology" onclick="showTechnologyDetails('Backend', 'Node.js, Express, Django')">
+      <h3>Backend</h3>
+      <div class="progress-bar" style="--progress: 70%;">
+        <span>70%</span>
+      </div>
+    </div>
+    <!-- Add more technologies as needed -->
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project" onclick="showProjectDetails('Memory Game', 'A classic memory matching game.')">
+      <h3>Memory Game</h3>
+      <p>A classic memory matching game. Test your memory by matching pairs of cards.</p>
+      <button onclick="testMemoryGame()">Test Project</button>
+    </div>
+    <div class="project" onclick="showProjectDetails('Snake Game', 'A simple snake game for entertainment.')">
+      <h3>Snake Game</h3>
+      <p>A simple snake game for entertainment. Control the snake and eat the food to grow.</p>
+      <button onclick="testSnakeGame()">Test Project</button>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me through the following channels:</p>
+    <ul>
+      <li>Discord: luckzislucky</li>
+      <!-- Add more contact information as needed -->
+    </ul>
+    <h3>Send me a message:</h3>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Luckz, All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Project Details Popup -->
+  <div id="projectDetailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProjectDetails()">&times;</span>
+      <h2 id="projectTitle"></h2>
+      <p id="projectDescription"></p>
+      <button id="testProjectButton">Test Project</button>
+    </div>
+  </div>
+
+  <!-- Skill Details Popup -->
+  <div id="skillDetailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSkillDetails()">&times;</span>
+      <h2 id="skillTitle"></h2>
+      <p id="skillDetails"></p>
+    </div>
+  </div>
+
+  <!-- Technology Details Popup -->
+  <div id="technologyDetailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeTechnologyDetails()">&times;</span>
+      <h2 id="technologyTitle"></h2>
+      <p id="technologyDetails"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
